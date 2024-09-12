@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>TheEvent Bootstrap Template - Speaker Details</title>
+  <meta http-equiv="refresh" content="5">
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Raleway:300,400,500,700,800" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+  <style>
+* {
+  box-sizing: border-box;
+}
+
+.row {
+  display: flex;
+  margin-left:-5px;
+  margin-right:-5px;
+}
+
+.column {
+  flex: 50%;
+  padding: 5px;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+  border: 1px solid #ddd;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+th, td {
+  text-align: left;
+  padding: 16px;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+</style>
+
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" >
+          <!-- <div class="container-fluid container-xxl d-flex align-items-center"> -->
+
+      <!-- <div id="logo" class="me-auto"> -->
+        <!-- Uncomment below if you prefer to use a text logo -->
+        <h1 class="text-center" style="background-color: #2f3138;color: #fff;font-family: sans-serif;font-weight: 700;letter-spacing: 3px;">Status of Visitors</h1>
+        <!-- <a href="index.html" class="scrollto"><img src="assets/img/logo.png" alt="" title=""></a> -->
+      <!-- </div> -->
+
+      
+      
+
+    <!-- </div> -->
+  </header><!-- End Header -->
+
+  <main id="main" class="main-page">
+
+    <!-- ======= Speaker Details Sectionn ======= -->
+    <section id="speakers-details">
+    	<!-- <h2 style="text-align: center;">Status of Visitors</h2> -->
+        <div class="row">
+            <div class="table-responsive col-md-4">
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                          <th scope="col">#</th>
+                          <th scope="col">Venue</th>
+                          <th scope="col">Status</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <% col1.forEach(lo =>{%>   
+                    
+                      <tr>
+                        <th scope="row"><%= lo.lid %></th>
+                        <td><%= lo.loc %></td>
+                        <% if(lo.crowd=="full"){ %>
+                        <td><button type="button" class="btn btn-danger"></button></td>
+                        <%} else if(lo.crowd=="half full"){ %>
+                        <td><button type="button" class="btn btn-warning"></button></td>
+                        <%}else{ %>
+                        <td><button type="button" class="btn btn-success"></button></td>
+                        <%} %>
+                        
+                      </tr>
+                    
+                    <% }) %>
+                    
+                    
+                      
+                    </tbody>
+                    </table>
+            </div>
+            <div class="table-responsive col-md-4">
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                          <th scope="col">#</th>
+                          <th scope="col">Venue</th>
+                          <th scope="col">Status</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <% col2.forEach(lo =>{%>   
+                    
+                      <tr>
+                        <th scope="row"><%= lo.lid %></th>
+                        <td><%= lo.loc %></td>
+                    
+                        <% if(lo.crowd=="full"){ %>
+                        <td><button type="button" class="btn btn-danger"></button></td>
+                        <%} else if(lo.crowd=="half full"){ %>
+                        <td><button type="button" class="btn btn-warning"></button></td>
+                        <%}else{ %>
+                        <td><button type="button" class="btn btn-success"></button></td>
+                        <%} %>
+                        
+                      </tr>
+                    
+                    <% }) %>
+                    
+                    
+                      
+                    </tbody>
+                    </table> 
+            </div>
+            <div class="table-responsive col-md-4">
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                          <th scope="col">#</th>
+                          <th scope="col">Venue</th>
+                          <th scope="col">Status</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <% col3.forEach(lo =>{%>   
+                    
+                      <tr>
+                        <th scope="row"><%= lo.lid %></th>
+                        <td><%= lo.loc %></td>
+                    
+                        <% if(lo.crowd=="full"){ %>
+                        <td><button type="button" class="btn btn-danger"></button></td>
+                        <%} else if(lo.crowd=="half full"){ %>
+                        <td><button type="button" class="btn btn-warning"></button></td>
+                        <%}else{ %>
+                        <td><button type="button" class="btn btn-success"></button></td>
+                        <%} %>
+                        
+                      </tr>
+                    
+                    <% }) %>
+                    
+                    
+                      
+                    </tbody>
+                    </table> 
+            </div>
+          </div>
+    </section>
+
+
+        
+  </div>
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
